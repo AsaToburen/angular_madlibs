@@ -34,13 +34,22 @@ body {
     height: 22em;
     border-bottom: 2px solid black; }
     body section h1 {
-      margin: 2.5em 0em 1em 2em;
+      margin: 2.5em 0em 0em 2em;
       font-size: 1.5em; }
+    body section div {
+      width: 100%;
+      height: 2em;
+      margin-bottom: .5em; }
+      body section div .gender {
+        margin-top: 1em;
+        margin-left: 4.4em;
+        display: inline-block;
+        height: 3em; }
     body section .column {
       width: 25%;
       display: inline-block;
       margin-left: 3em; }
-      body section .column input {
+      body section .column input[type='text'] {
         text-align: center;
         display: block;
         margin: 2em auto;
