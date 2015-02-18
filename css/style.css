@@ -73,5 +73,16 @@ body {
       font-size: 1.75em;
       line-height: 1.5em;
       margin-top: .5em; }
+  body .error-container {
+    margin-bottom: 4em;
+    width: 20%;
+    height: 3em;
+    border-radius: .5em;
+    margin-left: 3em;
+    position: relative;
+    bottom: 4em; }
+    body .error-container .error {
+      text-align: center;
+      margin-top: .2em; }
 
 /*# sourceMappingURL=style.css.map */

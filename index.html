@@ -13,32 +13,32 @@
       <h1>Automate This!</h1>
     </div>
   </header>
-  <section id="top" ng-hide='checkValid()' ng-show=''>
+  <section id="top" ng-hide='checkValid()'>
     <h1>Provide the following words:</h1>
     <div>
         <button class="button" ng-click="gender()">Gender Toggle</button>
     </div> 
     <form name="myForm" novalidate  ng-submit="submit()">
       <div class="column">
-        <input type="text" name="Name" ng-model="data.Name" required>
-        <input type="text" name="job_title" ng-model="data.job_title" required>
-        <input type="text" name="tedious_task" ng-model="data.tedious_task" required> 
+        <input type="text"  placeholder="Name" name="Name" ng-model="data.Name"  required>
+        <input type="text"  placeholder="Job title" name="job_title" ng-model="data.job_title" required>
+        <input type="text"  placeholder="tedious task" name="tedious_task" ng-model="data.tedious_task" required> 
       </div>
       <div class="column">
-        <input type="text" name="dirty_task" ng-model="data.dirty_task" required>
-        <input type="text" name="celebrity" ng-model="data.celebrity" required>
-        <input type="text" name="useless_skill" ng-model="data.useless_skill" required>
+        <input type="text" placeholder="dirty task" name="dirty_task" ng-model="data.dirty_task" required>
+        <input type="text" placeholder="celebrity" name="celebrity" ng-model="data.celebrity" required>
+        <input type="text" placeholder="useless skill" name="useless_skill" ng-model="data.useless_skill" required>
       </div>
       <div class="column">
-        <input type="text" name="obnoxious_celebrity" ng-model="data.obnoxious_celebrity" required>
-        <input type="number" name="huge_number" ng-model="data.huge_number" required>
-        <input type="text" name="adjective" ng-model="data.adjective" required>
+        <input type="text" placeholder="obnoxious celebrity" name="obnoxious_celebrity" ng-model="data.obnoxious_celebrity" required>
+        <input type="number" placeholder="huge number" name="" "huge_number" ng-model="data.huge_number" required>
+        <input type="text" placeholder="adjective" name="adjective" ng-model="data.adjective" required>
       </div>
       <div class="submit">  
         <button name="myForm" type="submit">Generate My Madlib</button>
       </div>
     </form>
-    <div ng-if="myForm.$submitted" ng-messages="myForm.$error">
+    <div class="error-container" ng-if="myForm.$submitted" ng-messages="myForm.$error">
         <span class="error" ng-message="required">Please fill out all fields!</span>
     </div>
   </section>
@@ -46,7 +46,7 @@
     <p>{{data.Name}} was a {{data.job_title}} who loved technology. Although {{genderSingular}} loved parts of {{genderPossessive}} job, {{genderSingular}} absolutely hated  {{data.tedious_task}} and {{data.dirty_task}}. So, {{data.Name}} met with {{genderPossessive}} life mentor {{data.celebrity}} who told {{genderObjective}} to learn how to {{data.useless_skill}} with Thinkful. Thinkful didn't offer a course on {{data.useless_skill}} so {{genderSingular}} studied programming instead.</p>
  
     <p>What a great decision! With {{genderPossessive}} new skills, {{data.Name}} built a(n) {{data.adjective}} robot named {{data.obnoxiuous_celbertity}} that not only loved {{data.dirty_task}} but did it {{data.huge_number}} times faster.</p>
-    <button name="reset" type="submit" ng-submit="resetForm()">Start Over</button>
+    <button name="reset" type="submit" ng-click="resetForm()">Start Over</button>
   </section>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular-messages.js"></script>

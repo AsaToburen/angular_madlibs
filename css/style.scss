@@ -92,5 +92,19 @@ body {
         margin-top: .5em;
       }
     }
+    .error-container {
+      margin-bottom: 4em;
+      width: 20%;
+      height: 3em;
+      border-radius: .5em;
+      margin-left: 3em;
+      position: relative;
+      bottom: 4em;
+       .error {
+        text-align: center;
+        margin-top: .2em;
+       }
+    }
+
 }
 
