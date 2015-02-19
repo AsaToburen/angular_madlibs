@@ -6,7 +6,8 @@ body {
   margin: 3em auto;
   width: 74%;
   border: 2px solid black;
-  padding: 0; }
+  padding: 0;
+  overflow: auto; }
   body header {
     display: inline-block;
     border-bottom: 3px solid black;
@@ -30,8 +31,16 @@ body {
       body header div h1 {
         margin: 0;
         font-size: 3em; }
+  body .animate-section {
+    -webkit-transition: all ease-out 1.5s;
+    transition: all linear 1.5s;
+    position: relative;
+    left: 0; }
+  body .animate-section.ng-hide {
+    left: 100em;
+    margin: 0;
+    padding: 0; }
   body section {
-    height: 25em;
     border-bottom: 2px solid black; }
     body section h1 {
       margin: 2.5em 0em 0em 2em;
@@ -67,17 +76,30 @@ body {
         margin-top: 2.5em; }
   body .text-area {
     height: 24em;
-    margin: 3em 4em;
-    border: 0; }
+    margin: 2.5em 4em;
+    border: 0;
+    background-color: #fff;
+    opacity: 1;
+    transition: all linear 1s; }
     body .text-area p {
       font-size: 1.75em;
       line-height: 1.5em;
       margin-top: .5em; }
+  body .text-area.ng-enter,
+  body .content.ng-leave.ng-leave-active {
+    opacity: 0;
+    margin: -.5em;
+    padding: 0;
+    display: block;
+    height: 0; }
+  body .text-area.ng-leave,
+  body .content.ng-enter.ng-enter-active {
+    opacity: 0;
+    height: 0em;
+    margin: -.5em; }
   body .error-container {
-    margin-bottom: 4em;
-    width: 20%;
-    height: 3em;
-    border-radius: .5em;
+    width: 30%;
+    height: 0;
     margin-left: 3em;
     position: relative;
     bottom: 4em; }

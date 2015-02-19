@@ -1,7 +1,6 @@
 
 
-angular.module('firstModule', [
-  'ngMessages'
+angular.module('firstModule', ['ngAnimate', 'ngMessages'
   ])
 
   .controller('FirstCtrl', ['$scope', function($scope) {
