@@ -36,14 +36,15 @@
         <input type="text" placeholder="adjective" name="adjective" ng-model="data.adjective" required>
       </div>
       <div class="submit">  
-        <button name="myForm" ng-click="showContent = !showContent" type="submit">Generate My Madlib</button>
+        <button name="myForm" type="submit">Generate My Madlib</button>
       </div>
     </form>
-    <div class="error-container" ng-if="myForm.$submitted" ng-messages="myForm.$error">
+    <div class="error-container" ng-messages="myForm.$error" ng-if="myForm.$error && myForm.$submitted">
         <span class="error" ng-message="required">Please fill out all fields!</span>
+        <span ng-message="number" ng-if="">Enter a number!</span>
     </div>
   </section>
-  <section class="text-area" ng-if='checkValid()'>
+  <section class="text-area" >
     <p>{{data.Name}} was a {{data.job_title}} who loved technology. Although {{genderSingular}} loved parts of {{genderPossessive}} job, {{genderSingular}} absolutely hated  {{data.tedious_task}} and {{data.dirty_task}}. So, {{data.Name}} met with {{genderPossessive}} life mentor {{data.celebrity}} who told {{genderObjective}} to learn how to {{data.useless_skill}} with Thinkful. Thinkful didn't offer a course on {{data.useless_skill}} so {{genderSingular}} studied programming instead.</p>
  
     <p>What a great decision! With {{genderPossessive}} new skills, {{data.Name}} built a(n) {{data.adjective}} robot named {{data.obnoxiuous_celbertity}} that not only loved {{data.dirty_task}} but did it {{data.huge_number}} times faster.</p>
