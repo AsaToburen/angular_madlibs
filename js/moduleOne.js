@@ -18,7 +18,7 @@ angular.module('firstModule', ['ngAnimate', 'ngMessages'
         $scope.genderPossessive = 'her';
       }
       };
-      
+
     $scope.checkValid = function() {
       if($scope.myForm.$submitted && $scope.myForm.$valid && !($scope.myForm.$pristine)) {
         return true;

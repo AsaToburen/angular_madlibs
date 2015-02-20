@@ -10,7 +10,7 @@ body {
   border: 2px solid black;
   padding: 0;
   overflow: auto;
-  transition: 1.5s linear height;
+  height: 38em;
         header {
           display: inline-block;
           border-bottom: 3px solid black;
@@ -39,24 +39,13 @@ body {
           }
         }
     }
-    .animate-section {
-      -webkit-transition: all ease-out 1.5s;
-      transition: all ease 1.5s;
-      position: relative;
-      top: 0;     
-    }
-
-    .animate-section.ng-hide {
-      top: -30em;
-      margin:0;
-      padding: 0;
-
-    }
-
 
     section {
       box-sizing: border-box;
-
+      opacity: 1;
+      position: relative;
+      left:0;
+      transition: all linear 1s;
 
       h1 {
         margin: 2.5em 0 0 2em;
@@ -101,13 +90,21 @@ body {
       }
     }
 
+    section.ng-hide {
+      opacity: 0;
+      display: inline;
+      left: 200em;
+    }
+
     .text-area {
       height: 24em;
       margin: 2.5em 4em; 
       border: 0;
       background-color: #fff;
       opacity: 1;
-      transition: all linear 2s;
+      transition: 4s linear all;
+      position: relative;
+      left: 0;
 
       p {
         font-size: 1.75em;
@@ -115,6 +112,21 @@ body {
         margin-top: .5em;
       }
     }
+      
+     .text-area.ng-enter,
+.text-area.ng-leave.ng-leave-active {
+        opacity: 0;
+      }
+
+.text-area.ng-leave,
+.text-area.ng-enter.ng-enter-active {
+      opacity: 1;
+}
+
+.text-area.slide.ng-leave, 
+.text-area.ng-leave.ng-leave-active {
+      left: -200em;
+}
 
  form.ng-submitted {
    input.ng-invalid {
@@ -126,12 +138,9 @@ body {
  }
 
     .error-container {
-      width: 30%;
-      margin: 0;
       position: relative;
       bottom: 3em;
-      display: inline;
-      position: absolute;
+      left: 5em;
 
        .error {
         text-align: center;

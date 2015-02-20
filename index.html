@@ -14,7 +14,7 @@
       <h1>Automate This!</h1>
     </div>
   </header>
-  <section id="top" class="animate-section" ng-hide='checkValid()'>
+  <section id="top" ng-hide='checkValid() && show'>
     <h1>Provide the following words:</h1>
     <div>
         <button class="button" ng-click="gender()">Gender Toggle</button>
@@ -36,19 +36,19 @@
         <input type="text" placeholder="adjective" name="adjective" ng-model="data.adjective" required>
       </div>
       <div class="submit">  
-        <button name="myForm" type="submit">Generate My Madlib</button>
+        <button name="myForm" type="submit" ng-click="show=!show">Generate My Madlib</button>
       </div>
     </form>
     <div class="error-container" ng-messages="myForm.$error" ng-if="myForm.$error && myForm.$submitted">
         <span class="error" ng-message="required">Please fill out all fields!</span>
-        <span ng-message="number" ng-if="">Enter a number!</span>
+        <span ng-message="number" ng-if="checkValid()">Enter a number!</span>
     </div>
   </section>
-  <section class="text-area" >
+  <section class="text-area slide" ng-if="checkValid() && show">
     <p>{{data.Name}} was a {{data.job_title}} who loved technology. Although {{genderSingular}} loved parts of {{genderPossessive}} job, {{genderSingular}} absolutely hated  {{data.tedious_task}} and {{data.dirty_task}}. So, {{data.Name}} met with {{genderPossessive}} life mentor {{data.celebrity}} who told {{genderObjective}} to learn how to {{data.useless_skill}} with Thinkful. Thinkful didn't offer a course on {{data.useless_skill}} so {{genderSingular}} studied programming instead.</p>
  
     <p>What a great decision! With {{genderPossessive}} new skills, {{data.Name}} built a(n) {{data.adjective}} robot named {{data.obnoxiuous_celbertity}} that not only loved {{data.dirty_task}} but did it {{data.huge_number}} times faster.</p>
-    <button name="reset" type="submit" ng-click="resetForm()">Start Over</button>
+    <button name="reset" type="submit" ng-click="resetForm() && slide!=slide">Start Over</button>
   </section>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-animate.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular-messages.js"></script>
