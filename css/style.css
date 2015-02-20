@@ -82,9 +82,10 @@ body {
     border: 0;
     background-color: #fff;
     opacity: 1;
-    transition: 4s linear all;
+    transition: 2s linear all;
     position: relative;
-    left: 0; }
+    left: 0;
+    top: 0; }
     body .text-area p {
       font-size: 1.75em;
       line-height: 1.5em;
@@ -94,10 +95,8 @@ body {
     opacity: 0; }
   body .text-area.ng-leave,
   body .text-area.ng-enter.ng-enter-active {
-    opacity: 1; }
-  body .text-area.slide.ng-leave,
-  body .text-area.ng-leave.ng-leave-active {
-    left: -200em; }
+    opacity: 1;
+    display: block; }
   body form.ng-submitted input.ng-invalid {
     outline: none !important;
     border: 2px solid red;

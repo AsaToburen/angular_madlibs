@@ -5,20 +5,27 @@ angular.module('firstModule', ['ngAnimate', 'ngMessages'
 
   .controller('FirstCtrl', ['$scope', function($scope) {
     
+    $scope.data = {
+      gender : "Female",
+      genderSingular : "she",
+      genderObjective : "her",
+      genderPossessive : "her"
+    };
+
     $scope.gender = function() {
-      if($scope.genderSingular === 'she') {
-        $scope.data.Name = 'Male name';
-        $scope.genderSingular = 'he';
-        $scope.genderObjective = 'him';
-        $scope.genderPossessive = 'his';
+      if($scope.data.genderSingular === "she") {
+        $scope.data.gender = "Male";
+        $scope.data.genderSingular = 'he';
+        $scope.data.genderObjective = 'him';
+        $scope.data.genderPossessive = 'his';
       } else {
-        $scope.data.Name = 'Female name';
-        $scope.genderSingular = 'she';
-        $scope.genderObjective = 'her';
-        $scope.genderPossessive = 'her';
+        $scope.data.gender = "Female";
+        $scope.data.genderSingular = 'she';
+        $scope.data.genderObjective = 'her';
+        $scope.data.genderPossessive = 'her';
       }
       };
-
+      
     $scope.checkValid = function() {
       if($scope.myForm.$submitted && $scope.myForm.$valid && !($scope.myForm.$pristine)) {
         return true;
@@ -26,7 +33,12 @@ angular.module('firstModule', ['ngAnimate', 'ngMessages'
     };
 
    $scope.resetForm = function() {
-        $scope.data = {};
+        $scope.data = {
+          gender : "Female",
+          genderSingular : "she",
+          genderObjective : "her",
+          genderPossessive : "her"
+        };
         $scope.myForm.$setPristine();
     };
 }]);

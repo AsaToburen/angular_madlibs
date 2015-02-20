@@ -102,9 +102,10 @@ body {
       border: 0;
       background-color: #fff;
       opacity: 1;
-      transition: 4s linear all;
+      transition: 2s linear all;
       position: relative;
       left: 0;
+      top: 0;
 
       p {
         font-size: 1.75em;
@@ -115,18 +116,15 @@ body {
       
      .text-area.ng-enter,
 .text-area.ng-leave.ng-leave-active {
-        opacity: 0;
+          opacity: 0;
       }
 
 .text-area.ng-leave,
 .text-area.ng-enter.ng-enter-active {
       opacity: 1;
+      display: block;
 }
 
-.text-area.slide.ng-leave, 
-.text-area.ng-leave.ng-leave-active {
-      left: -200em;
-}
 
  form.ng-submitted {
    input.ng-invalid {
