@@ -17,7 +17,7 @@
   <section id="top" ng-hide='checkValid() && show'>
     <h1>Provide the following words:</h1>
     <div>
-        <button class="button" ng-click="gender()">Gender Toggle</button> 
+        <button class="button" name="btn" ng-click="gender()">Gender Toggle</button> 
         <span>{{ data.gender }}</span>
     </div> 
     <form name="myForm" novalidate  ng-submit="submit()">
@@ -42,7 +42,7 @@
     </form>
     <div class="error-container" ng-messages="myForm.$error" ng-if="myForm.$error && myForm.$submitted">
         <div class="error" ng-message="required">Please fill out all fields!</div>
-        <div ng-message="number" ng-if="myForm.huge_number.$error">Enter a number!</div>
+        <div class="error" ng-message="number">Enter a number!</div>
     </div>
   </section>
   <section class="text-area" ng-if="checkValid() && show">
