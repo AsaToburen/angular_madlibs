@@ -33,12 +33,13 @@ angular.module('firstModule', ['ngAnimate', 'ngMessages'
     };
 
    $scope.resetForm = function() {
-        $scope.data = {
-          gender : "Female",
-          genderSingular : "she",
-          genderObjective : "her",
-          genderPossessive : "her"
-        };
-        $scope.myForm.$setPristine();
+    $scope.hideText = true;
+      $scope.data = {
+        gender : "Female",
+        genderSingular : "she",
+        genderObjective : "her",
+        genderPossessive : "her"
+      };
+      $scope.myForm.$setPristine();
     };
 }]);
