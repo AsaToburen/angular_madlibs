@@ -5,6 +5,8 @@ angular.module('firstModule', ['ngAnimate', 'ngMessages'
 
   .controller('FirstCtrl', ['$scope', function($scope) {
     
+    $scope.hide = false;
+
     $scope.data = {
       gender : "Female",
       genderSingular : "she",
@@ -28,12 +30,13 @@ angular.module('firstModule', ['ngAnimate', 'ngMessages'
       
     $scope.checkValid = function() {
       if($scope.myForm.$submitted && $scope.myForm.$valid && !($scope.myForm.$pristine)) {
+        $scope.hide = true;
         return true;
       }
     };
 
    $scope.resetForm = function() {
-    $scope.hideText = true;
+    $scope.hide = false;
       $scope.data = {
         gender : "Female",
         genderSingular : "she",

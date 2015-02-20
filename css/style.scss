@@ -90,40 +90,39 @@ body {
       }
     }
 
-    section.ng-hide {
+    #top.ng-hide {
       opacity: 0;
       display: inline;
       left: 200em;
     }
 
     .text-area {
-      height: 24em;
       margin: 2.5em 4em; 
       border: 0;
       background-color: #fff;
       opacity: 1;
-      transition: 2s linear all;
       position: relative;
-      left: 0;
+      right: 0;
       top: 0;
-
+      transition: all linear .7s;
+      
       p {
         font-size: 1.75em;
         line-height: 1.5em;
         margin-top: .5em;
       }
     }
-      
-     .text-area.ng-enter,
-.text-area.ng-leave.ng-leave-active {
-          opacity: 0;
-      }
+    .text-area.ng-hide-remove {
+      opacity: 0;
+      height: 0;
+    }
 
-.text-area.ng-leave,
-.text-area.ng-enter.ng-enter-active {
-      opacity: 1;
-      display: block;
-}
+    .text-area.ng-hide-add {
+      opacity: 0;
+      height: 0;
+    }
+//text-area ng-animate ng-hide-animate ng-hide-remove ng-hide-remove-active
+//text-area ng-animate ng-hide-animate ng-hide-add ng-hide ng-hide-add-active
 
 
  form.ng-submitted {
