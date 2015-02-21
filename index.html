@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en" ng-app="firstModule" ng-init="!show">
+<html lang="en" ng-app="madLibsMod">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
     <title>NgMadLibs</title>
 </head>
-<body ng-controller="FirstCtrl">
+<body ng-controller="mainCtrl">
   <header>
     <img class="happy-face" width="120px" src="images/mad-lib-happy-face.png" alt="Happy Face">
     <div>
@@ -37,10 +37,10 @@
         <input type="text" placeholder="adjective" name="adjective" ng-model="data.adjective" required>
       </div>
       <div class="submit">  
-        <button name="myForm" type="submit" ng-disabled="myForm.invalid" ng-click="checkValid()">Generate My Madlib</button>
+        <button name="myForm" type="submit" ng-disabled="myForm.$invalid" ng-click="checkValid()">Generate My Madlib</button>
       </div>
     </form>
-    <div class="error-container" ng-messages="myForm.$error" ng-if="myForm.$error && myForm.$submitted">
+    <div class="error-container" ng-messages="myForm.$error && myForm.$submitted">
         <div class="error" ng-message="required">Please fill out all fields!</div>
         <div class="error" ng-message="number">Enter a number!</div>
     </div>

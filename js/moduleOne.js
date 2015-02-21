@@ -1,9 +1,9 @@
 
 
-angular.module('firstModule', ['ngAnimate', 'ngMessages'
+angular.module('madLibsMod', ['ngAnimate', 'ngMessages'
   ])
 
-  .controller('FirstCtrl', ['$scope', function($scope) {
+  .controller('mainCtrl', ['$scope', function($scope) {
     
     $scope.hide = false;
 
