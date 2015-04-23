@@ -1,7 +1,26 @@
-
 html {
   box-sizing: border-box;
   font-family: sans-serif;
+}
+
+button {
+  padding: 10px 15px;
+  color: #FFFDFD;
+  background-color: #4583D1;
+  border: 2px solid #4073CE;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  cursor: pointer;
+  i {
+    padding-left: .5em;
+    display: inline;
+  }
+}
+
+button:active {
+  background-color: #3078D3;
+  border: 2px solid #174CAA;
 }
 
 body {
@@ -11,136 +30,121 @@ body {
   padding: 0;
   overflow: auto;
   height: 38em;
-        header {
-          display: inline-block;
-          border-bottom: 3px solid black;
-          border-top: 3px solid black;
-          width: 100%;
-          overflow: auto;
-          margin: -2px 0;
-          padding: 0;
-        .happy-face {
-          padding: 1.2% 4%;
-          border: 1px solid black;
-          border-top: 5px solid black;
-          border-right: 5px solid black;
-          border-bottom: 0;
-          margin-bottom: -4px;
-        }
-        div {
-          margin-top: 2px;
-          float: right;
-          width: 50%;
-          margin-right: 16%;
-          text-align: center;
-          h1 {
-              margin: 0;
-              font-size: 3em;
-          }
-        }
+  header {
+    display: inline-block;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    width: 100%;
+    margin: -2px 0;
+    padding: 0;
+    .happy-face {
+      padding: 1.2% 4%;
+      margin-bottom: -4px;
     }
-
-    section {
-      box-sizing: border-box;
-      opacity: 1;
-      position: relative;
-      left:0;
-      transition: all linear 1s;
-
+    img.logo {
+      margin-left: 3em;
+      display: inline-block;
+    }
+    div {
+      margin-top: 2px;
+      float: right;
+      width: 50%;
+      margin-right: 16%;
+      text-align: center;
       h1 {
-        margin: 2.5em 0 0 2em;
-        font-size: 1.5em;
+        margin: 0;
+        font-size: 3em;
       }
-       div{ 
-        width: 100%;
-        height: 2em;
-        margin-bottom: .5em;
-        
-        .button {
-            margin-top: 1em;
-            margin-left: 4.4em;
-            display: inline-block;
-            height: 3em;
-          }
-        }
-      .column {
-        width: 25%;
-        display: inline-block;
+    }
+  }
+  section {
+    box-sizing: border-box;
+    opacity: 1;
+    position: relative;
+    left: 0;
+    transition: all linear 1s;
+    h1 {
+      display: inline-block;
+      font-size: 1.5em;
+      padding-left: 1em;
+    }
+    div.toggle {
+      float: right;
+      margin: 1em;
+      margin-right: 1.5em;
+      text-align: left;
+      height: 2em;
+      margin-bottom: .5em;
+      display: inline-block;
+      button {
         margin-left: 3em;
-      }
-      input {
-          text-align: center;
-          display: block;
-          margin: 2em auto;
-          border: 3px solid black;
-          box-shadow: 0 0 10px #719ECE;
-          height: 2.5em;
-          font-size: .8em;
-        }
-      .submit {
-        width: 100%;
-        height: 5em;
-        margin-top: 3em;
-        border-top: 2px solid black;
-        button {
-          float: right;
-          margin-right: 5em;
-          margin-top: 2.5em;
-        }
+        margin-right: 3.5em;
       }
     }
-
-    #top.ng-hide {
-      opacity: 0;
-      display: inline;
-      left: 200em;
-    }
-
-    .text-area {
-      margin: 2.5em 4em; 
-      border: 0;
-      background-color: #fff;
-      opacity: 1;
-      position: relative;
-      right: 0;
-      top: 0;
-      transition: all linear .7s;
-      
-      p {
-        font-size: 1.75em;
-        line-height: 1.5em;
-        margin-top: .5em;
-      }
-    }
-    .text-area.ng-hide-remove {
-      opacity: 0;
-      height: 0;
-    }
-
-    .text-area.ng-hide-add {
-      opacity: 0;
-      height: 0;
-    }
-
- form.ng-submitted {
-   input.ng-invalid {
-    outline: none !important;
-    border: 2px solid red;
-    box-shadow: 0 0 10px #719ECE;
-}
-
- }
-
     .error-container {
-      position: relative;
-      bottom: 3em;
-      left: 5em;
-
-       .error {
-        text-align: center;
-        display: inline;
-       }
+      .error {
+        margin-left: 6.5em;
+        margin-top: -2.5em;
+      }
     }
+    .column {
+      width: 25%;
+      display: inline-block;
+      margin-left: 3em;
+    }
+    input {
+      text-align: center;
+      display: block;
+      margin: 2em auto;
+      border: 3px solid #000;
+      box-shadow: 0 0 10px #719ECE;
+      height: 2.5em;
+      font-size: .8em;
+    }
+    .submit {
+      width: 100%;
+      height: 5em;
+      margin-top: 3em;
+      border-top: 2px solid #000;
+      button {
+        float: right;
+        margin-right: 5em;
+        margin-top: 2.5em;
+      }
+    }
+  }
+  #top {
+    transition: all ease 1s;
+  }
+  #top.ng-hide {
+    opacity: 0;
+    display: inline;
+  }
+  #top.ng-enter,
+  #top.ng-enter-active {
+    opacity: 0;
+  }
+    #top.ng-leave,
+  #top.ng-leave-active {
+    opacity: 0;
+  }
 
+  section.text-area.ng-animate {
+    opacity: 0;
+  }
+  section.text-area {
+    transition: all 1s ease;
+    background-color: #fff;
+    opacity: 1;
+    padding: 3em;
+    p {
+      font-size: 1.5em;
+      line-height: 1.5em;
+      margin-top: .5em;
+    }
+    button {
+      float: right;
+      margin-right: 3em;
+    }
+  }
 }
-
